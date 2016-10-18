@@ -1,10 +1,10 @@
 Package.describe({
-  name: 'sach:flow-db-admin',
+  name: 'matadur:flow-db-admin',
   version: '1.1.5',
   // Brief, one-line summary of the package.
-  summary: 'Meteor Database Admin package for use with Flow Router',
+  summary: 'Meteor Database Admin package for use with Flow Router Forked From sach:flow-db-admin',
   // URL to the Git repository containing the source code for this package.
-  git: 'https://github.com/sachinbhutani/flow-db-admin',
+  git: 'https://github.com/matadur/flow-db-admin',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
