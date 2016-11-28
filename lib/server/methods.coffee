@@ -100,8 +100,3 @@ Meteor.methods
 		check arguments, [Match.Any]
 		if Roles.userIsInRole this.userId, ['admin']
 			Roles.removeUsersFromRoles _id, role, Roles.GLOBAL_GROUP
-
-	adminSetCollectionSort: (collection, _sort) ->
-		check arguments, [Match.Any]
-		global.AdminPages[collection].set
-			sort: _sort
