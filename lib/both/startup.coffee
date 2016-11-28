@@ -78,6 +78,7 @@ adminCreateTables = (collections) ->
 		_.defaults collection, {
 			showEditColumn: true
 			showDelColumn: true,
+			order: [[0,"desc"]],
 			stateSave: false
 		}
 
@@ -90,6 +91,7 @@ adminCreateTables = (collections) ->
 			data: column.name
 			title: column.label
 			createdCell: createdCell
+			orderable: true
 
 		if columns.length == 0
 			columns = defaultColumns()
@@ -108,6 +110,8 @@ adminCreateTables = (collections) ->
 			extraFields: collection.extraFields
 			dom: adminTablesDom
 			stateSave: collection.stateSave
+			ordering: true
+			order: collection.order	
 
 
 adminPublishTables = (collections) ->
