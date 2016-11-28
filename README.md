@@ -1,8 +1,10 @@
 Meteor Flow DB Admin
 ============
-`$ meteor add sach:flow-db-admin`
+`$ meteor add matadur:flow-db-admin`
 
-A fork of yogiben:admin package to work with flow-router instead of iron:router
+A fork of sach:flow-db-admin package, which was a fork of yogiben:admin package to work with flow-router instead of iron:router
+
+matadur:flow-db-admin adds a few minor fixes and updates. see the changelog for details.
 
 A complete admin dashboard solution for meteor built off the [kadira:flow-router](https://github.com/kadirahq/flow-router), [kadira:blaze-layout](https://github.com/kadirahq/blaze-layout), [alanning:roles](https://github.com/alanning/meteor-roles/) and [aldeed:autoform](https://github.com/aldeed/meteor-autoform) packages and frontend from the open source admin dashboard template, [Admin LTE](https://github.com/almasaeed2010/AdminLTE).
 
@@ -289,16 +291,3 @@ AdminDashboard.addCollectionItem(function (collection, path) {
   }
 });
 ```
-#### Change Log ####
-* Version 1.0.0 - 3rd Aug 2015
-Update to flow-router 2.0 and blaze-layout
-Updated from meteorhacks:flow-router, to kadirahq:flow-router (flow-router 2.0)
-Updated from meteorhacks:flow-layout, to kadirahq:blaze-layout
-Minor bug fixes.
-
-* Version 1.0.3
-Update to less for working with Meteor 1.2
-thanks to @CaptainN
-
-* Version 1.1
-Updates to remove modals and fixes for Meteor 1.2
