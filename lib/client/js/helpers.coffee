@@ -29,6 +29,11 @@ Template.registerHelper 'admin_collections', adminCollections
 Template.registerHelper 'admin_collection_name', ->
 	Session.get 'admin_collection_name'
 
+Template.registerHelper 'admin_collection_table_name', ->
+	name = Session.get 'admin_collection_name'
+	name += "TableView"
+	name
+
 Template.registerHelper 'admin_current_id', ->
 	Session.get 'admin_id'
 
