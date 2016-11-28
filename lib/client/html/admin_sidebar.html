@@ -7,6 +7,13 @@
 						<i class="fa fa-dashboard"></i> <span>Dashboard</span>
 					</a>
 				</li>
+				{{#each admin_sidebar_items}}
+					{{#if options.urls}}
+						{{> adminSidebarItemTree}}
+					{{else}}
+						{{> adminSidebarItem}}
+					{{/if}}
+				{{/each}}
 				{{#each admin_collections}}
 				<li class="treeview">
 					<a href="#">
@@ -22,13 +29,6 @@
 						{{/each}}
 					</ul>
 				</li>
-				{{/each}}
-				{{#each admin_sidebar_items}}
-					{{#if options.urls}}
-						{{> adminSidebarItemTree}}
-					{{else}}
-						{{> adminSidebarItem}}
-					{{/if}}
 				{{/each}}
 			</ul>
 		</div>
