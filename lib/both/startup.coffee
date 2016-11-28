@@ -77,7 +77,8 @@ adminCreateTables = (collections) ->
 	_.each AdminConfig?.collections, (collection, name) ->
 		_.defaults collection, {
 			showEditColumn: true
-			showDelColumn: true
+			showDelColumn: true,
+			stateSave: false
 		}
 
 		columns = _.map collection.tableColumns, (column) ->
@@ -106,6 +107,7 @@ adminCreateTables = (collections) ->
 			columns: columns
 			extraFields: collection.extraFields
 			dom: adminTablesDom
+			stateSave: collection.stateSave
 
 
 adminPublishTables = (collections) ->
