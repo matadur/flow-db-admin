@@ -22,3 +22,6 @@ Version 1.1.7
 * Moved extra sidebar items to top of sidebar
 * Implemented datatable sort with orderable/order and added default sort (first col desc)
 * Implemented tabular save state option to remember sort changes
+
+Version 1.1.8
+* Removed GLOBAL_GROUP flag in adding user roles, caused failures with alanning:roles in some cases
