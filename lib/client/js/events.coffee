@@ -10,7 +10,7 @@ Template.fAdminLayout.events
 
 Template.AdminDashboardUsersEdit.events
 	'click .btn-add-role': (e,t) ->
-		console.log 'adding user to role'
+		console.log 'adding user to role', $(e.target).attr('user'), $(e.target).attr('role')
 		Meteor.call 'adminAddUserToRole', $(e.target).attr('user'), $(e.target).attr('role')
 	'click .btn-remove-role': (e,t) ->
 		console.log 'removing user from role'
