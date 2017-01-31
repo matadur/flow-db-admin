@@ -25,3 +25,6 @@ Version 1.1.7
 
 Version 1.1.8
 * Removed GLOBAL_GROUP flag in adding user roles, caused failures with alanning:roles in some cases
+
+Version 1.1.9
+* Removed dynamic filler text
