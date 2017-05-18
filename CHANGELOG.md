@@ -28,3 +28,6 @@ Version 1.1.8
 
 Version 1.1.9
 * Removed dynamic filler text
+
+Version 1.1.10
+* Added option to hide breadcrumb via Session variable

@@ -11,6 +11,7 @@
 							{{$.Session.get 'admin_title'}}
 							<small>{{$.Session.get 'admin_subtitle'}}</small>
 						</h1>
+            {{#unless $.Session.get 'hide_breadcrumb'}}
 						<br>
 						<ol class="breadcrumb">
 							<li><a href="/admin/">Dashboard</a></li>
@@ -24,6 +25,7 @@
 							<li>Edit</li>
 							{{/if}}
 						</ol>
+            {{/unless}}
 					</section>
 					<section class="content">
 						{{> Template.dynamic template=main}}
