@@ -1,6 +1,6 @@
 Package.describe({
   name: 'matadur:flow-db-admin',
-  version: '1.1.10',
+  version: '1.1.11',
   // Brief, one-line summary of the package.
   summary: 'Meteor Database Admin package for use with Flow Router Forked From sach:flow-db-admin',
   // URL to the Git repository containing the source code for this package.
@@ -32,7 +32,6 @@ Package.onUse(function(api) {
     'raix:handlebar-helpers@0.2.5',
     'momentjs:moment@2.10.6',
     'aldeed:tabular@1.4.0',
-    'mfactory:admin-lte@0.0.2',
     'check'
     ],
     both);
