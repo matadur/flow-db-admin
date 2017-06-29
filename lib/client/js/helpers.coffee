@@ -10,6 +10,7 @@ adminCollections = ->
 		collectionObject: Meteor.users
 		icon: 'user'
 		label: 'Users'
+		hideFromTree: AdminConfig.hideUsersFromTree || false
 
 	_.map collections, (obj, key) ->
 		obj = _.extend obj, {name: key}

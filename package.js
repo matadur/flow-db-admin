@@ -1,6 +1,6 @@
 Package.describe({
   name: 'matadur:flow-db-admin',
-  version: '1.2.1',
+  version: '1.2.2',
   // Brief, one-line summary of the package.
   summary: 'Meteor Database Admin package for use with Flow Router Forked From sach:flow-db-admin',
   // URL to the Git repository containing the source code for this package.

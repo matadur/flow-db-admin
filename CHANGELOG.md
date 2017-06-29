@@ -1,5 +1,8 @@
 # Change Log
 
+Version 1.2.2
+* Add option to hide Users collection from side bar
+
 Version 1.2.1
 * Add option to hide collections from side bar
 * Remove fixed body style
