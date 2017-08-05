@@ -59,7 +59,11 @@
 		</a>
 		<ul class="treeview-menu">
 			{{#each options.urls}}
-			<li class="{{isActivePath url}}"><a href="{{url}}"><i class="fa fa-angle-double-right"></i>{{title}}</a></li>
+			<li class="{{isActivePath url}}">
+				<a href="{{url}}" target="{{target}}">
+					<i class="fa fa-angle-double-right"></i>{{title}}
+				</a>
+			</li>
 			{{/each}}
 		</ul>
 	</li>

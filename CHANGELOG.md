@@ -1,5 +1,8 @@
 # Change Log
 
+Version 1.2.3
+* Enable setting the target parameter on side bar urls
+
 Version 1.2.2
 * Add option to hide Users collection from side bar
 
