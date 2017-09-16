@@ -1,5 +1,8 @@
 # Change Log
 
+Version 1.2.4
+* Set data for admin users edit
+
 Version 1.2.3
 * Enable setting the target parameter on side bar urls
 

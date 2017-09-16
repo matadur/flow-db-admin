@@ -43,6 +43,10 @@ Template.AdminDashboardEdit.rendered = ->
 	editId	= FlowRouter.getParam '_id'
 	Session.set 'admin_doc', adminCollectionObject(editcollectionName).findOne _id : editId
 
+Template.AdminDashboardUsersEdit.rendered = ->
+	editId	= FlowRouter.getParam '_id'
+	Session.set 'admin_doc', Meteor.users.findOne _id : editId
+
 Template.AdminDashboardEdit.helpers
 	fadmin_doc: ->
 	  editcollectionName = FlowRouter.getParam 'collectionName'
