@@ -1,5 +1,9 @@
 # Change Log
 
+Version 1.2.6
+
+* Switch to `matadur:active-route-legacy` to get support for staringatlights:flow-router
+
 Version 1.2.5
 * Switch to `staringatlights:flow-router`
 
