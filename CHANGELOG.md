@@ -1,5 +1,8 @@
 # Change Log
 
+Version 1.2.5
+* Switch to `staringatlights:flow-router`
+
 Version 1.2.4
 * Set data for admin users edit
 
