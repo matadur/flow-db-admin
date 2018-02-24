@@ -10,6 +10,7 @@ adminEditButton = {
 	width: '40px'
 	orderable: false
 }
+
 adminDelButton = {
 	data: '_id'
 	title: 'Delete'
@@ -46,7 +47,6 @@ AdminTables.Users = new Tabular.Table
 		{
 			data: '_id'
 			title: 'Admin'
-			# TODO: use `tmpl`
 			createdCell: (node, cellData, rowData) ->
 				$(node).html(Blaze.toHTMLWithData Template.adminUsersIsAdmin, {_id: cellData}, node)
 			width: '40px'
@@ -57,14 +57,6 @@ AdminTables.Users = new Tabular.Table
 			render: (value) ->
 				if value then value[0].address else ''
 			searchable: true
-		}
-		{
-			data: 'emails'
-			title: 'Mail'
-			# TODO: use `tmpl`
-			createdCell: (node, cellData, rowData) ->
-				$(node).html(Blaze.toHTMLWithData Template.adminUsersMailBtn, {emails: cellData}, node)
-			width: '40px'
 		}
 		{ data: 'createdAt', title: 'Joined' }
 	], adminEditDelButtons
@@ -111,8 +103,7 @@ adminCreateTables = (collections) ->
 			dom: adminTablesDom
 			stateSave: collection.stateSave
 			ordering: true
-			order: collection.order	
-
+			order: collection.order
 
 adminPublishTables = (collections) ->
 	_.each collections, (collection, name) ->
@@ -138,3 +129,9 @@ adminPublishTables = (collections) ->
 Meteor.startup ->
 	adminCreateTables AdminConfig?.collections
 	adminPublishTables AdminConfig?.collections if Meteor.isServer
+	AdminDashboard.users = AdminConfig.users || {
+    hideFromTree: false
+    hideWidget: false
+    newTemplate: 'AdminDashboardUsersNew'
+    editTemplate: 'AdminDashboardUsersEdit'
+	}

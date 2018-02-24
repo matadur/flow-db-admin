@@ -1,5 +1,19 @@
 # Change Log
 
+Version 1.3
+
+* Added users object to AdminConfig
+* Removed user new/edit templates & all related functions
+* Load & handle user via templates on config
+* Remove email button from user table view
+* Reduce text on no config alert
+* Add config option to hide Users widget
+* Change default widget color to gray
+* AdminConfig option for admin schemas
+
+* Remove dependencies email, moment, jquery
+* Update dependencies kadira:blaze-layout, aldeed:collection2, aldeed:autoform, alanning:roles, raix:handlebar-helpers
+
 Version 1.2.6
 
 * Switch to `matadur:active-route-legacy` to get support for staringatlights:flow-router

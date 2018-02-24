@@ -27,51 +27,6 @@ Meteor.methods
 				# global[collection].remove {_id:_id}
 				adminCollectionObject(collection).remove {_id: _id}
 
-
-	adminNewUser: (doc) ->
-		check arguments, [Match.Any]
-		if Roles.userIsInRole this.userId, ['admin']
-			emails = doc.email.split(',')
-			_.each emails, (email)->
-				user = {}
-				user.email = email
-				unless doc.chooseOwnPassword
-					user.password = doc.password
-
-				_id = Accounts.createUser user
-
-				if doc.sendPassword and AdminConfig.fromEmail?
-					Email.send
-						to: user.email
-						from: AdminConfig.fromEmail
-						subject: 'Your account has been created'
-						html: 'You\'ve just had an account created for ' + Meteor.absoluteUrl() + ' with password ' + doc.password
-
-				if not doc.sendPassword
-					Accounts.sendEnrollmentEmail _id
-
-	adminUpdateUser: (modifier,_id)->
-		check arguments, [Match.Any]
-		if Roles.userIsInRole this.userId, ['admin']
-			Future = Npm.require('fibers/future');
-			fut = new Future();
-			Meteor.users.update {_id:_id},modifier,(e,r)->
-				fut['return']( {e:e,r:r} )
-			return fut.wait()
-
-	adminSendResetPasswordEmail: (doc)->
-		check arguments, [Match.Any]
-		if Roles.userIsInRole this.userId, ['admin']
-			console.log 'Changing password for user ' + doc._id
-			Accounts.sendResetPasswordEmail(doc._id)
-
-	adminChangePassword: (doc)->
-		check arguments, [Match.Any]
-		if Roles.userIsInRole this.userId, ['admin']
-			console.log 'Changing password for user ' + doc._id
-			Accounts.setPassword(doc._id, doc.password)
-			label: 'Email user their new password'
-
 	adminCheckAdmin: ->
 		check arguments, [Match.Any]
 		user = Meteor.users.findOne(_id:this.userId)
@@ -90,13 +45,3 @@ Meteor.methods
 			else if this.userId == Meteor.users.findOne({},{sort:{createdAt:1}})._id
 				console.log 'Making first user admin: ' + email
 				Roles.addUsersToRoles this.userId, ['admin']
-
-	adminAddUserToRole: (_id,role)->
-		check arguments, [Match.Any]
-		if Roles.userIsInRole this.userId, ['admin']
-			Roles.addUsersToRoles _id, role
-
-	adminRemoveUserToRole: (_id,role)->
-		check arguments, [Match.Any]
-		if Roles.userIsInRole this.userId, ['admin']
-			Roles.removeUsersFromRoles _id, role

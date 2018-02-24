@@ -2,9 +2,12 @@ Meteor Flow DB Admin
 ============
 `$ meteor add matadur:flow-db-admin`
 
-A fork of sach:flow-db-admin package, which was a fork of yogiben:admin package to work with flow-router instead of iron:router
+A fork of sach:flow-db-admin package, which was a fork of yogiben:admin package
 
-*matadur:flow-db-admin* adds several fixes and updates — see the changelog for details.
+### WARNING! ###
+*matadur:flow-db-admin* adds many fixes and updates for personal use. As such, this may not work for you, or at all. See the changelog for details, and use at your own risk!
+
+### flow-db-admin ###
 
 A complete admin dashboard solution for meteor built off the [kadira:flow-router](https://github.com/kadirahq/flow-router), [kadira:blaze-layout](https://github.com/kadirahq/blaze-layout), [alanning:roles](https://github.com/alanning/meteor-roles/) and [aldeed:autoform](https://github.com/aldeed/meteor-autoform) packages and frontend from the open source admin dashboard template, [Admin LTE](https://github.com/almasaeed2010/AdminLTE).
 

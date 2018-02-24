@@ -10,11 +10,14 @@ adminCollections = ->
 		collectionObject: Meteor.users
 		icon: 'user'
 		label: 'Users'
-		hideFromTree: AdminConfig.hideUsersFromTree || false
+		hideFromTree: AdminConfig.users.hideFromTree || false
+
+	if AdminConfig.users.hideWidget
+		collections.Users.showWidget = false
 
 	_.map collections, (obj, key) ->
 		obj = _.extend obj, {name: key}
-		obj = _.defaults obj, {label: key, icon: 'plus', color: 'blue'}
+		obj = _.defaults obj, {label: key, icon: 'plus', color: 'gray'}
 		obj = _.extend obj,
 			viewPath: FlowRouter.path "/admin/view/:coll",{coll: key}
 			newPath: FlowRouter.path "/admin/new/:coll",{coll: key}
@@ -41,9 +44,6 @@ Template.registerHelper 'admin_current_id', ->
 Template.registerHelper 'admin_current_doc', ->
 	Session.get 'admin_doc'
 
-Template.registerHelper 'admin_is_users_collection', ->
-	Session.get('admin_collection_name') == 'Users'
-
 Template.registerHelper 'admin_sidebar_items', ->
 	AdminDashboard.sidebarItems
 
@@ -68,17 +68,17 @@ Template.registerHelper 'admin_omit_fields', ->
 		collection
 
 Template.registerHelper 'AdminSchemas', ->
-	AdminDashboard.schemas
-
-# Template.registerHelper 'adminIsUserInRole', (_id,role)->
-# 	Roles.userIsInRole _id, role
+	if _.has(AdminConfig, 'adminSchemas')
+		AdminConfig.adminSchemas
+	else
+		AdminDashboard.schemas
 
 Template.registerHelper 'adminGetUsers', ->
 	Meteor.users
 
 Template.registerHelper 'adminGetUserSchema', ->
-	if _.has(AdminConfig, 'userSchema')
-		schema = AdminConfig.userSchema
+	if AdminConfig.users.schema
+		schema = AdminConfig.users.schema
 	else if typeof Meteor.users._c2 == 'object'
 		schema = Meteor.users.simpleSchema()
 
@@ -104,19 +104,11 @@ Template.registerHelper 'adminWidgets', ->
 	if typeof AdminConfig.dashboard != 'undefined' and typeof AdminConfig.dashboard.widgets != 'undefined'
 		AdminConfig.dashboard.widgets
 
-# Template.registerHelper 'adminUserEmail', (user) ->
-# 	if user && user.emails && user.emails[0] && user.emails[0].address
-# 		user.emails[0].address
-# 	else if user && user.services && user.services.facebook && user.services.facebook.email
-# 		user.services.facebook.email
-# 	else if user && user.services && user.services.google && user.services.google.email
-# 		user.services.google.email
-
 Template.registerHelper 'adminViewPath', (collection)->
-		FlowRouter.path "/admin/view/:coll",{coll: collection}
+	FlowRouter.path "/admin/view/:coll",{coll: collection}
 
 Template.registerHelper 'adminNewPath', (collection)->
-		FlowRouter.path "/admin/new/:coll",{coll: collection}
+	FlowRouter.path "/admin/new/:coll",{coll: collection}
 
 Template.registerHelper 'AdminDashboardPath', ->
 	FlowRouter.path 'AdminDashboard'

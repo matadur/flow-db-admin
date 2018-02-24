@@ -1,11 +1,7 @@
 # Add hooks used by many forms
 AutoForm.addHooks [
 		'admin_insert',
-		'admin_update',
-		'adminNewUser',
-		'adminUpdateUser',
-		'adminSendResetPasswordEmail',
-		'adminChangePassword'],
+		'admin_update'],
 	beginSubmit: ->
 		$('.btn-primary').addClass('disabled')
 	endSubmit: ->
@@ -40,22 +36,3 @@ AutoForm.hooks
 			return false
 		onSuccess: (formType, collection)->
 			AdminDashboard.alertSuccess 'Successfully updated'
-
-	adminNewUser:
-		onSuccess: (formType, result)->
-			AdminDashboard.alertSuccess 'Created user'
-
-	adminUpdateUser:
-		onSubmit: (insertDoc, updateDoc, currentDoc)->
-			Meteor.call 'adminUpdateUser', updateDoc, Session.get('admin_id'), @done
-			return false
-		onSuccess: (formType, result)->
-			AdminDashboard.alertSuccess 'Updated user'
-
-	adminSendResetPasswordEmail:
-		onSuccess: (formType, result)->
-			AdminDashboard.alertSuccess 'Email sent'
-
-	adminChangePassword:
-		onSuccess: (operation, result, template)->
-			AdminDashboard.alertSuccess 'Password reset'

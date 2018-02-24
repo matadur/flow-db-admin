@@ -57,26 +57,6 @@
 </template>
 <template name="NoConfig">
 	<p class="alert alert-info">
-		You need to define an AdminConfig object to use the admin dashboard.
-		<br/>
-		A basic config to manage the 'Posts' and 'Comments' collection would look like this:
-		<br/>
-		<code>
-		AdminConfig = {
-		<br/>
-			adminEmails: ['	ben@code2create.com'],
-		<br/>
-			collections:
-		<br/>
-				{
-		<br/>
-					Posts: {},
-		<br/>
-					Comments: {}
-		<br/>
-				}
-		<br/>
-		}
-		</code>
+    Either no AdminConfig object exists or it is in an invalid state.
 	</p>
 </template>
