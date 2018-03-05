@@ -6,6 +6,10 @@
 	else
 		lookup collection
 
+@adminCollection = (collection) ->
+	if typeof AdminConfig.collections[collection] != 'undefined'
+		AdminConfig.collections[collection]
+
 @adminCallback = (name, args, callback) ->
 	stop = false
 	if typeof AdminConfig?.callbacks?[name] == 'function'
