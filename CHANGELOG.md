@@ -1,5 +1,10 @@
 # Change Log
 
+Version 1.3.1
+
+* Role requirements for doc insert/update/remove methods can now be set at top-level or collection-level admin config
+* Default role requirement for doc insert/update/remove methods is now 'root' instead of 'admin'
+
 Version 1.3
 
 * Added users object to AdminConfig
