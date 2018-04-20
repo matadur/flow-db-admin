@@ -1,8 +1,8 @@
 <template name="AdminDashboard">
 	{{#each adminWidgets}}
-	{{> UI.dynamic template=template data=data}}
+		{{> UI.dynamic template=template data=data}}
 	{{else}}
-	{{> adminDefaultWidgets}}
+		{{> adminDefaultWidgets}}
 	{{/each}}
 </template>
 
