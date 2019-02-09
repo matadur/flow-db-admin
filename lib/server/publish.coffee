@@ -4,7 +4,7 @@ Meteor.publishComposite 'adminCollectionDoc', (collection, id) ->
 	if Roles.userIsInRole this.userId, ['admin']
 		find: ->
 			adminCollectionObject(collection).find(id)
-		children: AdminConfig?.collections?[collection]?.children or []
+		# children: AdminConfig?.collections?[collection]?.children or []
 	else
 		@ready()
 

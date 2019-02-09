@@ -124,7 +124,7 @@ adminPublishTables = (collections) ->
 			find: ->
 				@unblock()
 				adminCollectionObject(name).find {_id: {$in: ids}}, {fields: fields}
-			children: collection.children
+			# children: collection.children
 
 Meteor.startup ->
 	adminCreateTables AdminConfig?.collections
