@@ -17,13 +17,13 @@ Package.onUse(function(api) {
 
   api.use(
     [
+    'check',
     'coffeescript',
     'underscore',
     'reactive-var',
+    'ostrio:flow-router-extra',
+    'kadira:blaze-layout',
     'meteorhacks:unblock@1.1.0',
-    'staringatlights:flow-router@2.12.2',
-    'kadira:blaze-layout@2.3.0',
-    'matadur:active-route-legacy@2.3.4',
     'reywood:publish-composite@1.4.2',
     'aldeed:collection2@2.10.0',
     'aldeed:autoform@5.8.1',
@@ -31,7 +31,7 @@ Package.onUse(function(api) {
     'alanning:roles@1.2.16',
     'raix:handlebar-helpers@0.2.5',
     'aldeed:tabular@1.4.0',
-    'check'
+
     ],
     both);
 

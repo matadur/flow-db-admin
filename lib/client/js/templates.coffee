@@ -1,3 +1,5 @@
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+
 Template.AdminDashboardView.rendered = ->
 	table = @$('.dataTable').DataTable();
 
