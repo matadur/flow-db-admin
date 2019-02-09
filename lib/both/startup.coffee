@@ -84,6 +84,7 @@ adminCreateTables = (collections) ->
 			title: column.label
 			createdCell: createdCell
 			orderable: true
+			visible: column.visible
 
 		if columns.length == 0
 			columns = defaultColumns()
