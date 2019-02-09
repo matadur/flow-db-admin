@@ -11,12 +11,13 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.2');
+  api.versionsFrom('1.5');
 
   both = ['client','server']
 
   api.use(
     [
+    'ecmascript',
     'check',
     'coffeescript',
     'underscore',
