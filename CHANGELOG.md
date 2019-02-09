@@ -1,5 +1,16 @@
 # Change Log
 
+Version 1.4.0
+
+* replace router with ostrio:flow-router-extra
+* remove dependencies for staringatlights:flow-router & matadur:active-route-legacy;
+* add ecmascript as dependency; up min api to 1.5
+* comment out breaking children
+* add visible to column def
+* option to pass function to trigger on route changes
+* fix and issue with admin scrolling
+* get admin prefix from config
+
 Version 1.3.1
 
 * Role requirements for doc insert/update/remove methods can now be set at top-level or collection-level admin config
