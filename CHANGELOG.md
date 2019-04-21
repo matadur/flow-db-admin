@@ -1,5 +1,9 @@
 # Change Log
 
+Version 1.4.1
+
+* remove ostrio:flow-router-extra imports - throwing ecmascript errors and don't seem to be needed anyway
+
 Version 1.4.0
 
 * replace router with ostrio:flow-router-extra

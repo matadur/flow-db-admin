@@ -1,4 +1,3 @@
-import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 Template.registerHelper('AdminTables', AdminTables);
 
@@ -28,7 +27,7 @@ Template.registerHelper 'AdminConfig', ->
 	AdminConfig if typeof AdminConfig != 'undefined'
 
 Template.registerHelper 'admin_skin', ->
-	AdminConfig?.skin or 'black-light'
+	AdminConfig?.skin or 'blue'
 
 Template.registerHelper 'admin_collections', adminCollections
 

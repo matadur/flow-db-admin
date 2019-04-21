@@ -1,4 +1,3 @@
-import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 # Add hooks used by many forms
 AutoForm.addHooks [

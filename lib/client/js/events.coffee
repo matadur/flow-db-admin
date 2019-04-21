@@ -1,4 +1,3 @@
-import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 Template.fAdminLayout.events
 	'click .btn-delete': (e,t) ->
