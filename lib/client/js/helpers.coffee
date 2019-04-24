@@ -27,7 +27,7 @@ Template.registerHelper 'AdminConfig', ->
 	AdminConfig if typeof AdminConfig != 'undefined'
 
 Template.registerHelper 'admin_skin', ->
-	AdminConfig?.skin or 'blue'
+	AdminConfig?.skin or 'black-light'
 
 Template.registerHelper 'admin_collections', adminCollections
 
