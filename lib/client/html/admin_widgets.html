@@ -7,7 +7,7 @@
 </template>
 
 <template name="adminCollectionWidget">
-	<div class="{{#if class}}{{class}}{{else}}col-lg-3 col-xs-6{{/if}}">
+	<div class="{{#if class}}{{class}}{{else}}col-lg-3 col-xs-6{{/if}} dash-widget">
 	{{#with adminGetCollection collection}}
 		<a href="{{adminViewPath this.name}}">
 			<div class="small-box bg-{{color}}">
