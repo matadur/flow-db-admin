@@ -1,5 +1,9 @@
 # Change Log
 
+Version 1.4.3
+
+* add dash-widget class to widgets on dashboard
+
 Version 1.4.2
 
 * change default skin back to black-light
