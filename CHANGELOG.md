@@ -1,5 +1,10 @@
 # Change Log
 
+Version 1.4.4
+
+* remove meteorhacks:unblock
+* works with Meteor 1.7.0.5
+
 Version 1.4.3
 
 * add dash-widget class to widgets on dashboard

@@ -120,10 +120,7 @@ adminPublishTables = (collections) ->
 			, {}
 			_.extend fields, extraFields
 
-			@unblock()
-
 			find: ->
-				@unblock()
 				adminCollectionObject(name).find {_id: {$in: ids}}, {fields: fields}
 			# children: collection.children
 

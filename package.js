@@ -1,6 +1,6 @@
 Package.describe({
   name: 'matadur:flow-db-admin',
-  version: '1.4.3',
+  version: '1.4.4',
   // Brief, one-line summary of the package.
   summary: 'Meteor Database Admin package for use with Flow Router Forked From sach:flow-db-admin',
   // URL to the Git repository containing the source code for this package.
@@ -24,7 +24,6 @@ Package.onUse(function(api) {
     'coffeescript@1.0.17',
     'ostrio:flow-router-extra@3.6.2',
     'kadira:blaze-layout@2.3.0',
-    'meteorhacks:unblock@1.1.0',
     'reywood:publish-composite@1.4.2',
     'aldeed:collection2@2.10.0',
     'aldeed:autoform@5.8.1',
