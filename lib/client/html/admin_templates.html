@@ -60,7 +60,8 @@
 		{{> UI.dynamic template=name data=data }}
 		{{/with}}
 	{{else}}
-		{{#if hasDocuments}}
+		{{#if hasDocuments}}			
+			<a href="export" class="download-csv" data-name="{{admin_collection_table_name}}">export to CSV</a>
 			{{> tabular table=admin_table id=admin_collection_table_name class="table dataTable" }}
 		{{else}}
 			<div class="alert alert-info">

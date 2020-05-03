@@ -51,6 +51,7 @@ Package.onUse(function(api) {
     'lib/client/html/fadmin_layouts.html',
     'lib/client/html/admin_sidebar.html',
     'lib/client/html/admin_header.html',
+    'lib/client/js/admin_events.js',
     'lib/client/js/admin_layout.js',
     'lib/client/js/helpers.coffee',
     'lib/client/js/templates.coffee',
