@@ -1,5 +1,12 @@
 # Change Log
 
+Version 1.4.5
+
+* add csv download link to all table views
+* add 'All' selector to table layouts
+* hide users widget from dash by default
+* update default users dash view
+
 Version 1.4.4
 
 * remove meteorhacks:unblock
