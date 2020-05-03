@@ -44,13 +44,14 @@ AdminTables.Users = new Tabular.Table
 	name: 'Users'
 	collection: Meteor.users
 	columns: _.union [
-		{
-			data: '_id'
-			title: 'Admin'
-			createdCell: (node, cellData, rowData) ->
-				$(node).html(Blaze.toHTMLWithData Template.adminUsersIsAdmin, {_id: cellData}, node)
-			width: '40px'
-		}
+		# {
+		# 	data: '_id'
+		# 	title: 'Admin'
+		# 	createdCell: (node, cellData, rowData) ->
+		# 		$(node).html(Blaze.toHTMLWithData Template.adminUsersIsAdmin, {_id: cellData}, node)
+		# 	width: '40px'
+		# }
+		{ data: 'createdAt', title: 'Created' }
 		{
 			data: 'emails'
 			title: 'Email'
@@ -58,8 +59,15 @@ AdminTables.Users = new Tabular.Table
 				if value then value[0].address else ''
 			searchable: true
 		}
-		{ data: 'createdAt', title: 'Joined' }
-	], adminEditDelButtons
+		{
+			data: '_id'
+			title: 'ID'
+			render: (value) ->
+				' <a href="/admin/users/manage?user=' + value + '" title="open in user management" alt="manage user">manage</a> ' + value
+		}
+	]
+	# , adminEditDelButtons
+	order: [[0,"desc"]]
 	dom: adminTablesDom
 
 adminTablePubName = (collection) ->
