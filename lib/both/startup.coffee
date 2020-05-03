@@ -129,7 +129,7 @@ Meteor.startup ->
 	adminPublishTables AdminConfig?.collections if Meteor.isServer
 	AdminDashboard.users = AdminConfig.users || {
     hideFromTree: false
-    hideWidget: false
+    hideWidget: true
     newTemplate: 'AdminDashboardUsersNew'
     editTemplate: 'AdminDashboardUsersEdit'
 	}
