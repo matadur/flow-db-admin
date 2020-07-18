@@ -1,5 +1,10 @@
 # Change Log
 
+Version 1.4.6
+
+* change doc title on router changes
+* remove commas in fields on csv exports; add list of cols to exclude
+
 Version 1.4.5
 
 * add csv download link to all table views
