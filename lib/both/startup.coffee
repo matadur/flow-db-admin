@@ -105,7 +105,7 @@ adminCreateTables = (collections) ->
 		AdminTables[name] = new Tabular.Table
 			name: name
 			collection: adminCollectionObject(name)
-			pub: collection.children and adminTablePubName(name)
+			pub: collection.pub || (collection.children and adminTablePubName(name))
 			sub: collection.sub
 			columns: columns
 			extraFields: collection.extraFields
