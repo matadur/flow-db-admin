@@ -113,6 +113,7 @@ adminCreateTables = (collections) ->
 			stateSave: collection.stateSave
 			ordering: true
 			order: collection.order
+			changeSelector: collection.changeSelector
 
 adminPublishTables = (collections) ->
 	_.each collections, (collection, name) ->
