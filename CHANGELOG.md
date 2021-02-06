@@ -1,5 +1,11 @@
 # Change Log
 
+Version 1.4.7
+
+* add support for changing the table selector
+* allow passing custom query for widget count (widgetCountQuery)
+* add support for custom publications
+
 Version 1.4.6
 
 * change doc title on router changes
