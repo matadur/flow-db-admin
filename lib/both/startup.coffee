@@ -114,6 +114,7 @@ adminCreateTables = (collections) ->
 			ordering: true
 			order: collection.order
 			changeSelector: collection.changeSelector
+			widgetCountQuery: collection.widgetCountQuery
 
 adminPublishTables = (collections) ->
 	_.each collections, (collection, name) ->
